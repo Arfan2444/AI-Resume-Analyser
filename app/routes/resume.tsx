@@ -20,7 +20,7 @@ const resume = () => {
 
   useEffect(() => {
     if (!isLoading && !auth.isAuthenticated)
-      navigate(`/auth?next=/resume${id}`);
+      navigate(`/auth?next=/resume/${id}`);
   }, [isLoading]);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const resume = () => {
       const resumeUrl = URL.createObjectURL(pdfBlob);
       setResumeUrl(resumeUrl);
 
-      const imageBlob = await fs.read(data.imagepath);
+      const imageBlob = await fs.read(data.imagePath);
       if (!imageBlob) return;
       const imageUrl = URL.createObjectURL(imageBlob);
       setImageUrl(imageUrl);
@@ -87,7 +87,7 @@ const resume = () => {
                 score={feedback.ATS.score || 0}
                 suggestions={feedback.ATS.tips || []}
               />
-              <Details />
+              <Details feedback={feedback} />
             </div>
           ) : (
             <img src="/public/images/resume-scan-2.gif" className="w-full" />
