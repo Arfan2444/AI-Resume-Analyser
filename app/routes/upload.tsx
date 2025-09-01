@@ -1,4 +1,4 @@
-import { prepareInstructions } from "/Projects/Ai Resume Analyser/constants/index";
+import { prepareInstructions } from "../../constants/index";
 import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router";
 import FileUploader from "~/components/FileUploader";
