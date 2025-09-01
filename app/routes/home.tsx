@@ -7,11 +7,18 @@ import { useEffect, useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Hirelytics" },
+    { title: "Smart AI Resume Analyzer" },
     {
       name: "description",
-      content: "Where resumes meet data-driven decisions.",
+      content: "AI-powered Resume Analyzer made by Arfan Pathan",
     },
+    { name: "author", content: "Arfan Pathan" },
+    { property: "og:title", content: "Smart AI Resume Analyzer" },
+    {
+      property: "og:description",
+      content: "Made by Arfan Pathan | https://www.linkedin.com/in/arfanpathan",
+    },
+    { property: "og:url", content: "https://github.com/Arfan2444" },
   ];
 }
 
@@ -49,7 +56,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    <main className="bg-[url('/images/sitebg.jpg')] bg-cover">
       <Navbar />
       <section className="main-section">
         <div className="page-heading">
